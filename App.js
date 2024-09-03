@@ -66,7 +66,7 @@ React.useEffect(()=> {
     {Logado ?( 
       <View style={styles.container}>
         <SafeAreaView style={styles.tela}>
-          <Text style={styles.logoTexto}>Aero Reef</Text>
+          <Text style={styles.logoTexto}>Aqua Reef</Text>
           
           <View style={styles.containerSecoes}>
             <Text style={styles.textoUser}>Bem vindo, {User}</Text>
@@ -106,7 +106,7 @@ React.useEffect(()=> {
       <View style={styles.container}>
       <LinearGradient colors={['#007ACC','#A2D9FF' ,'#48C774']} style={styles.background} />
       <SafeAreaView style={styles.tela}>
-        <Text style={styles.logoTexto}>Aero Reef</Text>
+        <Text style={styles.logoTexto}>Aqua Reef</Text>
         <TextInput
           style={styles.inputs}
           onChangeText={setUser}
