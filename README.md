@@ -1,12 +1,17 @@
-# app-uvv
-Aplicativo para o trabalho de Dev mobile
+# Aplicativo Aqua Reef
 
-Ideia principal do app: A ideia do aplicativo é ser um aplicativo de ambiente aquático, tipo um zoológico, especificamente seres marinhos. Será dividido em três seções (talvez mais):
-/n-Animais: Essa seção terá uma listagem de diversos peixes, suas especificações (tamanho, espécie, alimentação, etc) e ambientes (Onde é encontrado?, Profundidade, etc).
--Flora: Basicamente a flora do fundo do mar, seguindo a mesma linha dos animais.
--Oceanos: Informações sobre os oceanos, seja temperatura, curiosidades, etc.
--Criptozoologia (placeholder): Criptozoologia é o estudo de espécies que nunca foram confirmadas (por exemplo, o monstro do lago ness), nessa seção terá informações sobre esse assunto.
+## Descrição
 
-Tema/Estética: Escolhi a estética do Helvetica Aqua Aero, que utiliza uma paleta de cores vibrantes que relembram o mar, praia, etc.
+O **Aqua Reef** é um aplicativo de ambiente aquático. A principal ideia é criar uma plataforma que funcione como um zoológico marinho, onde os usuários podem explorar informações sobre peixes, flora marinha, oceanos e criptozoologia.
 
-Porque um login para um app de zoo?: É uma boa pergunta, estou pensando se crio uma seção de loja, ou talvez algo interativo que tenha a necessidade de cadastro.
+- **Navegação por Seções:** Após o login, o usuário pode acessar diferentes seções do aplicativo:
+  - **Animais:** Listagem de peixes com especificações detalhadas e informações sobre seus ambientes.
+  - **Flora:** Informações sobre a flora marinha.
+  - **Oceanos:** Dados sobre oceanos, como temperatura e curiosidades.
+  - **Criptozoologia (Placeholder):** Informações sobre espécies não confirmadas, como o monstro do lago Ness, e curiosidades focadas em mistério do fundo do mar.
+
+## Tema/Estética
+
+O app segue a estética **Helvetica Aqua Aero**, com uma paleta de cores vibrantes que evocam o ambiente marinho. O design inclui gradientes e efeitos de brilho para simular a aparência aquática.
+
+
