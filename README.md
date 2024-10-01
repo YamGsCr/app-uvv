@@ -1,18 +1,11 @@
+# Sample Snack app
 
-# Aplicativo Aqua Reef
+Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
 
-## Descrição
+When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
 
-O Aqua Reef é um aplicativo de ambiente aquático. A principal ideia é criar uma plataforma que funcione como um zoológico marinho, onde os usuários podem explorar informações sobre peixes, flora marinha, oceanos e criptozoologia.
+All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
 
-- **Navegação por Seções:** Após o login, o usuário pode acessar diferentes seções do aplicativo:
-  - **Animais:** Listagem de peixes com especificações detalhadas e informações sobre seus ambientes.
-  - **Flora:** Informações sobre a flora marinha.
-  - **Oceanos:** Dados sobre oceanos, como temperatura e curiosidades.
-  - **Criptozoologia (Placeholder):** Informações sobre espécies não confirmadas, como o monstro do lago Ness, e curiosidades focadas em mistério do fundo do mar.
+If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
 
-## Tema/Estética
-
-O app segue a estética **Helvetica Aqua Aero**, com uma paleta de cores vibrantes que evocam o ambiente marinho. O design inclui gradientes e efeitos de brilho para simular a aparência aquática.
-
-Porque um login para um app de zoo?: Estou pensando se crio uma seção de loja, ou talvez algo interativo que tenha a necessidade de cadastro.
+Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
