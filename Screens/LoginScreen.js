@@ -17,6 +17,9 @@ const LoginScreen = ({ navigation }) => {
       setError('Falha ao fazer login');
     }
   };
+  const handleSubmitEditing = () => {
+    handleLogin();
+    };
 
   return (
     <SafeAreaView style={styles.tela}>
@@ -36,11 +39,13 @@ const LoginScreen = ({ navigation }) => {
         placeholder="Senha"
         secureTextEntry
         placeholderTextColor="#B0B0B0"
+        returnKeyType="done"
+        onSubmitEditing={handleSubmitEditing} 
       />
       <TouchableOpacity style={styles.containerBotao} onPress={handleLogin}>
         <Text style={styles.textoSecao}>Login</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.containerBotao} onPress={() => navigation.navigate('Cadastro')}>
+      <TouchableOpacity style={styles.containerBotao} onPress={() => navigation.navigate('teste')}>
         <Text style={styles.textoSecao}>Cadastrar</Text>
       </TouchableOpacity>
     </SafeAreaView>

@@ -7,6 +7,7 @@ import HomeScreen from './Screens/HomeScreen';
 import PeixeScreen from './Screens/PeixeScreen';
 import OceanoScreen from './Screens/OceanoScreen';
 import FloraScreen from './Screens/FloraScreen';
+import TesteScreen from './Screens/teste';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ const App = () => {
         <Stack.Screen name="Peixes" component={PeixeScreen} options={{headerShown: false}} />
         <Stack.Screen name="Oceanos" component={OceanoScreen} options={{headerShown: false}} />
         <Stack.Screen name="Flora" component={FloraScreen} options={{headerShown: false}} />
+        <Stack.Screen name="teste" component={TesteScreen} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
