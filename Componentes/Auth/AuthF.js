@@ -1,7 +1,15 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// Função de Cadastro
+const validateInput = (user, password, setError) => {
+  if (!user || !password) {
+    setError('Usuário e senha são obrigatórios');
+    return false;
+  }
+  return true;
+};
+
 export const Cadastro = async (user, password, setLogado, setError) => {
+  if (!validateInput(user, password, setError)) return;
   try {
     const cadastradosJson = await AsyncStorage.getItem('cadastrados');
     let cadastrados = cadastradosJson ? JSON.parse(cadastradosJson) : {};
@@ -17,13 +25,13 @@ export const Cadastro = async (user, password, setLogado, setError) => {
   }
 };
 
-// Função de Login
 export const Login = async (user, password, setLogado, setError) => {
+  if (!validateInput(user, password, setError)) return;
   try {
     const cadastradosJson = await AsyncStorage.getItem('cadastrados');
     let cadastrados = cadastradosJson ? JSON.parse(cadastradosJson) : {};
 
-    if (cadastrados[user] === password) {
+    if (cadastrados[user] === password) { 
       await AsyncStorage.setItem('User', user);
       setLogado(true);
     } else {
@@ -33,13 +41,11 @@ export const Login = async (user, password, setLogado, setError) => {
     setError('Error: ' + error.message);
   }
 };
-
-// Função de Logout
 export const Logout = async (setLogado, setError) => {
   try {
     await AsyncStorage.removeItem('User');
     setLogado(false);
   } catch (error) {
-    setError('Error: ' + error.message);
+    setError('Erro ao fazer logout: ' + error.message);
   }
 };

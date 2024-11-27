@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
 import styles from '../styles/styles'; // Ajuste o caminho conforme necessário
 import { Cadastro } from '../Componentes/Auth/AuthF'; // Ajuste o caminho conforme necessário
@@ -9,10 +9,18 @@ const CadastroScreen = ({ navigation }) => {
   const [error, setError] = useState('');
   const [logado, setLogado] = useState(false);
 
+  useEffect(() => {
+    if (logado) {
+      navigation.replace('Home');
+    }
+  }, [logado]);
+
   const handleCadastro = async () => {
     try {
-      await Cadastro(user, password, setLogado);
-      navigation.replace('Login');
+      await Cadastro(user, password, setLogado, setError);
+      if (logado) {
+        navigation.replace('Login');
+      }
     } catch (e) {
       setError('Falha ao cadastrar');
     }

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, SafeAreaView } from 'react-native';
 import styles from '../styles/styles';
 import { Logout } from '../Componentes/Auth/AuthF';
+import LoginScreen from './LoginScreen';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation,user }) => {
   const [logado, setLogado] = useState(true);
   const [error, setError] = useState('');
 
@@ -16,7 +17,7 @@ const HomeScreen = ({ navigation }) => {
     <SafeAreaView style={styles.tela}>
       <Text style={styles.logoTexto}>Aero Reef</Text>
       <View style={styles.containerSecoes}>
-        <Text style={styles.textoUser}>Bem vindo</Text>
+        <Text style={styles.textoUser}>Bem vindo, {user}</Text>
         <View style={styles.containerBotao}>
           <Image
             style={styles.iconesSecao}
@@ -31,8 +32,8 @@ const HomeScreen = ({ navigation }) => {
             style={styles.iconesSecao}
             source={require('../assets/iconeAquarios.png')}
           />
-          <TouchableOpacity style={styles.botaoSecao} onPress={() => navigation.replace('Oceanos')}>
-            <Text style={styles.textoSecao}>Oceanos</Text>
+          <TouchableOpacity style={styles.botaoSecao} onPress={() => navigation.replace('Praias')}>
+            <Text style={styles.textoSecao}>Praias</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.containerBotao}>

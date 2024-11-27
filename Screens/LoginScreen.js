@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Text, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
 import styles from '../styles/styles';
 import { Login } from '../Componentes/Auth/AuthF';
 
@@ -9,17 +9,23 @@ const LoginScreen = ({ navigation }) => {
   const [error, setError] = useState('');
   const [logado, setLogado] = useState(false);
 
+  useEffect(() => {
+    if (logado) {
+      navigation.replace('Home');
+    }
+  }, [logado]);
+
   const handleLogin = async () => {
     try {
       await Login(user, password, setLogado, setError);
-      navigation.replace('Home');
     } catch (e) {
       setError('Falha ao fazer login');
     }
   };
+
   const handleSubmitEditing = () => {
     handleLogin();
-    };
+  };
 
   return (
     <SafeAreaView style={styles.tela}>
@@ -40,12 +46,12 @@ const LoginScreen = ({ navigation }) => {
         secureTextEntry
         placeholderTextColor="#B0B0B0"
         returnKeyType="done"
-        onSubmitEditing={handleSubmitEditing} 
+        onSubmitEditing={handleSubmitEditing}
       />
       <TouchableOpacity style={styles.containerBotao} onPress={handleLogin}>
         <Text style={styles.textoSecao}>Login</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.containerBotao} onPress={() => navigation.navigate('teste')}>
+      <TouchableOpacity style={styles.containerBotao} onPress={() => navigation.navigate('Cadastro')}>
         <Text style={styles.textoSecao}>Cadastrar</Text>
       </TouchableOpacity>
     </SafeAreaView>
